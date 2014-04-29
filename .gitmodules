@@ -1,0 +1,15 @@
+[submodule "bundle/unite"]
+	path = bundle/unite
+	url = https://github.com/Shougo/unite.vim/
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "bundle/vim-twig"]
+	path = bundle/vim-twig
+	url = https://github.com/evidens/vim-twig
+[submodule "bundle/vim-vala"]
+	path = bundle/vim-vala
+	url = https://github.com/tkztmk/vim-vala.git
