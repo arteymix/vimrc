@@ -11,3 +11,7 @@ execute pathogen#infect()
 syntax enable
 set background=dark
 colorscheme solarized
+
+" line at 80 characters
+set textwidth=80
+let &colorcolumn=join(range(81, 9999), ",") " 81,82,83,84,...
