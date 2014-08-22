@@ -17,3 +17,4 @@ execute pathogen#infect()
 " post-pathogen
 colorscheme solarized     " enable solarized theme
 call togglebg#map("<F5>") " switch solarized background
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>" " use tab to trigger omnicomplete
