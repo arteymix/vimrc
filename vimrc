@@ -1,22 +1,19 @@
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set smartindent
+" coding
+set shiftwidth=4  " 4 spaces for indenting
+set tabstop=4     " 4 spaces for tab
+set softtabstop=4 " 4 spaces for inserted tab
+set expandtab     " expand tab to spaces
+set smartindent   " smart indentation
+set nowrap        " do not break long lines
+
+" style
+set background=dark
+let &colorcolumn=join(range(81,200),",") " different background past 80 characters
 
 " pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-" solarized
-syntax enable
-colorscheme solarized
-set background=dark
-
-" toggle background
-call togglebg#map("<F5>")
-
-" line at 80 characters
-" set textwidth=80
-let &colorcolumn=join(range(81,999),",")
-
-set nowrap
+" post-pathogen
+colorscheme solarized     " enable solarized theme
+call togglebg#map("<F5>") " switch solarized background
