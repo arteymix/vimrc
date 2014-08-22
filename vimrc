@@ -7,6 +7,7 @@ set smartindent   " smart indentation
 set nowrap        " do not break long lines
 
 " style
+set term=xterm-256color
 set background=dark
 let &colorcolumn=join(range(81,200),",") " different background past 80 characters
 
