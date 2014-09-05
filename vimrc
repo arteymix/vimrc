@@ -9,7 +9,9 @@ set nowrap        " do not break long lines
 " style
 set term=xterm-256color
 set background=dark
-let &colorcolumn=join(range(81,200),",") " different background past 80 characters
+if v:version >= 730
+    let &colorcolumn=join(range(81,200),",") " different background past 80 characters
+endif
 
 " pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
