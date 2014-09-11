@@ -9,7 +9,7 @@ set nowrap        " do not break long lines
 " style
 set term=xterm-256color
 set background=dark
-if v:version >= 730
+if v:version >= 703
     let &colorcolumn=join(range(81,200),",") " different background past 80 characters
 endif
 
