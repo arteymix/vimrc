@@ -17,7 +17,9 @@ endif
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+
 " post-pathogen
 colorscheme solarized     " enable solarized theme
 call togglebg#map("<F5>") " switch solarized background
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>" " use tab to trigger omnicomplete

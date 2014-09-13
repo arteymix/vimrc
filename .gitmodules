@@ -22,9 +22,9 @@
 [submodule "bundle/phpcomplete-extended"]
 	path = bundle/phpcomplete-extended
 	url = https://github.com/m2mdas/phpcomplete-extended.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = https://github.com/edsono/vim-matchit.git
+[submodule "bundle/neocomplete"]
+	path = bundle/neocomplete
+	url = https://github.com/Shougo/neocomplete.vim.git
