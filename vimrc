@@ -9,13 +9,17 @@ set nowrap        " do not break long lines
 " style
 set term=xterm-256color
 set background=dark
-let &colorcolumn=join(range(81,200),",") " different background past 80 characters
+if v:version >= 703
+    let &colorcolumn=join(range(81,200),",") " different background past 80 characters
+endif
 
 " pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+
 " post-pathogen
 colorscheme solarized     " enable solarized theme
 call togglebg#map("<F5>") " switch solarized background
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>" " use tab to trigger omnicomplete
