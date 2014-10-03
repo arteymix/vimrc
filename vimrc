@@ -13,12 +13,24 @@ if v:version >= 703
     let &colorcolumn=join(range(81,200),",") " different background past 80 characters
 endif
 
+" completion
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
 " pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
+" syntax coloring
+syntax on
+
 " neocomplete
-let g:neocomplete#enable_at_startup = 1
+let g:acp_enableAtStartup=0
+let g:neocomplete#enable_at_startup=1
+let g:neocomplete#enable_smart_case=1
 
 " post-pathogen
 colorscheme solarized     " enable solarized theme
