@@ -1,6 +1,5 @@
 vimrc
 =====
-
 My personal vimrc file including
 
 * dark and light solarized color scheme
@@ -11,13 +10,23 @@ I mainly use it under the GNOME Terminal.
 
 Have fun hacking it ;)
 
-# Installation
-
+Installation
+------------
 Clone the repository directly in your home directory
-
-    git clone https://github.com/arteymix/vimrc.git .vim
+```bash
+git clone https://github.com/arteymix/vimrc.git .vim
+cd .vim
+git submodule update --init --recursive
+```
 
 Remember to compile vimproc
+```bash
+cd bundle/vimproc; make
+```
 
-    cd bundle/vimproc
-    make
+Pull often
+```
+git pull
+git submodule update --init --recursive
+cd bundle/vimproc; make
+```
