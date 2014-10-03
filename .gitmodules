@@ -22,6 +22,12 @@
 [submodule "bundle/phpcomplete-extended"]
 	path = bundle/phpcomplete-extended
 	url = https://github.com/m2mdas/phpcomplete-extended.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/vim-autoformat"]
+	path = bundle/vim-autoformat
+	url = https://github.com/Chiel92/vim-autoformat.git
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = https://github.com/edsono/vim-matchit.git
