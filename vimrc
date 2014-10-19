@@ -5,6 +5,7 @@ set softtabstop=4 " 4 spaces for inserted tab
 set expandtab     " expand tab to spaces
 set smartindent   " smart indentation
 set nowrap        " do not break long lines
+set number        " show line numbers
 
 " style
 set term=xterm-256color
@@ -31,6 +32,10 @@ syntax on
 let g:acp_enableAtStartup=0
 let g:neocomplete#enable_at_startup=1
 let g:neocomplete#enable_smart_case=1
+
+" phpcomplete
+
+let g:phpcomplete_index_composer_command="composer"
 
 " post-pathogen
 colorscheme solarized     " enable solarized theme
