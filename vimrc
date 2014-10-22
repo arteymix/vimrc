@@ -25,7 +25,6 @@ endif
 " pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
-" check for bundle dependencies
 let g:pathogen_disabled=[]
 
 " neocomplete requires vim to be compiled with lua
