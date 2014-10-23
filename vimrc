@@ -47,3 +47,7 @@ let g:phpcomplete_index_composer_command="composer"
 " solarized
 colorscheme solarized     " enable solarized theme
 call togglebg#map("<F5>") " switch solarized background
+
+" airline
+let g:airline_powerline_fonts = 1
+set laststatus=2
