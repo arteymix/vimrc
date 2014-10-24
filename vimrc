@@ -1,11 +1,12 @@
 " coding
 set shiftwidth=4  " 4 spaces for indenting
-set tabstop=4     " 4 spaces for tab
+set tabstop=4     " 4 spaces shown per tab
 set softtabstop=4 " 4 spaces for inserted tab
 set expandtab     " expand tab to spaces
 set smartindent   " smart indentation
 set nowrap        " do not break long lines
 set number        " show line numbers
+set showmatch     " highlight matching parenthesis, brace, ...
 
 " completion
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -16,11 +17,15 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " style
 syntax on
-set term=xterm-256color
-set background=dark
+set term=xterm-256color " fix for color set
+set background=dark     " dark by default, switch with F5
+set cursorline          " highlight current line
 if v:version >= 703
     let &colorcolumn=join(range(81,200),",") " different background past 80 characters
 endif
+
+" misc & performance
+set lazyredraw " redraw when necessary
 
 " pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
@@ -49,5 +54,6 @@ colorscheme solarized     " enable solarized theme
 call togglebg#map("<F5>") " switch solarized background
 
 " airline
-let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
 set laststatus=2
