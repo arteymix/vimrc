@@ -2,11 +2,16 @@ vimrc
 =====
 My personal vimrc file including
 
-* dark and light solarized color scheme
+* dark and light solarized color scheme (toggle with F5)
 * syntax highlight for Vala, Markdown, Twig and MIPS
 * [pathogen](https://github.com/tpope/vim-pathogen)
+* [vim-airline](https://github.com/bling/vim-airline)
+* [neocomplete](https://github.com/Shougo/neocomplete.vim), if lua is enabled
 
-I mainly use it under the GNOME Terminal.
+I mainly use it under the
+[GNOME Terminal](http://en.wikipedia.org/wiki/GNOME_Terminal).
+
+![Preview with the dark solarized theme.](https://raw.githubusercontent.com/arteymix/vimrc/master/preview.png)
 
 Have fun hacking it ;)
 
