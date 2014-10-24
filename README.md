@@ -19,14 +19,14 @@ cd .vim
 git submodule update --init --recursive
 ```
 
-Remember to compile vimproc
+Bundles requiring compilation is automated through the `Makefile` file:
 ```bash
-cd bundle/vimproc; make
+make
 ```
 
-Pull often
+Pull often to keep up to date with latest features and fixes:
 ```
 git pull
 git submodule update --init --recursive
-cd bundle/vimproc; make
+make
 ```
