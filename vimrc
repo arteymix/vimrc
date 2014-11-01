@@ -46,6 +46,9 @@ if has('lua')
     let g:neocomplete#enable_smart_case=1
 endif
 
+" supertab
+let g:SuperTabDefaultCompletionType="<c-n>" " scroll from top to bottom
+
 " phpcomplete
 let g:phpcomplete_index_composer_command="composer"
 
