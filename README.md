@@ -7,6 +7,8 @@ My personal vimrc file including
 * [pathogen](https://github.com/tpope/vim-pathogen)
 * [vim-airline](https://github.com/bling/vim-airline)
 * [neocomplete](https://github.com/Shougo/neocomplete.vim), if lua is enabled
+* [vim-autoclose](https://github.com/) to close parenthesis automatically
+* [nerdtree](https://github.com/scrooloose/nerdtree) to browse files
 
 I mainly use it under the
 [GNOME Terminal](http://en.wikipedia.org/wiki/GNOME_Terminal).
@@ -30,7 +32,7 @@ make
 ```
 
 Pull often to keep up to date with latest features and fixes:
-```
+```bash
 git pull
 git submodule update --init --recursive
 make

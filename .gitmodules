@@ -55,3 +55,9 @@
 [submodule "bundle/vim-autoclose"]
 	path = bundle/vim-autoclose
 	url = https://github.com/Townk/vim-autoclose.git
+[submodule "bundle/vim-ocl"]
+	path = bundle/vim-ocl
+	url = https://github.com/arteymix/vim-ocl.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git

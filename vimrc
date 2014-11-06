@@ -4,6 +4,7 @@ set tabstop=4     " 4 spaces shown per tab
 set softtabstop=4 " 4 spaces for inserted tab
 set expandtab     " expand tab to spaces
 set smartindent   " smart indentation
+set textwidth=80  " 80 characters line long
 set nowrap        " do not break long lines
 set number        " show line numbers
 set showmatch     " highlight matching parenthesis, brace, ...
