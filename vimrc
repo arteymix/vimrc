@@ -3,11 +3,10 @@ set shiftwidth=4  " 4 spaces for indenting
 set tabstop=4     " 4 spaces shown per tab
 set softtabstop=4 " 4 spaces for inserted tab
 set expandtab     " expand tab to spaces
+set autoindent    " autoindent when appliable
 set smartindent   " smart indentation
-set textwidth=80  " 80 characters line long
-set nowrap        " do not break long lines
-set number        " show line numbers
 set showmatch     " highlight matching parenthesis, brace, ...
+set nowrap        " do not break long lines
 
 " completion
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -18,9 +17,10 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " style
 syntax on
+set number              " show line numbers
 set term=xterm-256color " fix for color set
 set background=dark     " dark by default, switch with F5
-set cursorline          " highlight current line
+set cursorline          " highlight current
 if v:version >= 703
     let &colorcolumn=join(range(81,200),",") " different background past 80 characters
 endif

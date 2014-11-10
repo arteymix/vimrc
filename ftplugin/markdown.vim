@@ -1,2 +1,2 @@
 " coding
-set wrap          " enforce wrapping
+set textwidth=80  " 80 characters line long
