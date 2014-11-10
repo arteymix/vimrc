@@ -2,12 +2,13 @@ vimrc
 =====
 My personal vimrc file including
 
-* dark and light solarized color scheme (toggle with F5)
-* syntax highlight for Vala, Markdown, Twig and MIPS
+* dark and light [Solarized]() color scheme (toggle with F5)
+* extra syntax highlighting for BNF, Liquid, Markdown, MIPS, OCL, Twig and Vala
 * [pathogen](https://github.com/tpope/vim-pathogen)
 * [vim-airline](https://github.com/bling/vim-airline)
 * [neocomplete](https://github.com/Shougo/neocomplete.vim), if lua is enabled
 * [vim-autoclose](https://github.com/) to close parenthesis automatically
+* [vim-fugitive]() for an optimal git integration
 * [nerdtree](https://github.com/scrooloose/nerdtree) to browse files
 
 I mainly use it under the
@@ -37,3 +38,9 @@ git pull
 git submodule update --init --recursive
 make
 ```
+
+Todo
+----
+List of plugins to bundle and test, eventually...
+* [vim-gitter](), git diff (+, -, ~) in the status bar
+* [vim-easy-align](), align content

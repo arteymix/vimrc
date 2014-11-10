@@ -60,4 +60,7 @@ call togglebg#map("<F5>") " switch solarized background
 " airline
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
-set laststatus=2
+set laststatus=2 
+
+" gutter
+highlight SignColumn ctermbg=black
