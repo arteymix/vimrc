@@ -1,3 +1,10 @@
 # call vimproc make from root
-all:
+all: vimproc delimitMate
+
+vimproc:
 	$(MAKE) -C bundle/vimproc
+
+delimitMate:
+	$(MAKE) -C bundle/delimitMate
+
+
