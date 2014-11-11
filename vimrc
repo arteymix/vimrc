@@ -7,10 +7,11 @@ set autoindent    " autoindent when appliable
 set smartindent   " smart indentation
 set showmatch     " highlight matching parenthesis, brace, ...
 set nowrap        " do not break long lines
+set backspace=2   " backspace in insert mode
 
 " completion
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html,mkd setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
@@ -60,7 +61,7 @@ call togglebg#map("<F5>") " switch solarized background
 " airline
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
-set laststatus=2 
+set laststatus=2
 
 " gutter
 highlight SignColumn ctermbg=black
