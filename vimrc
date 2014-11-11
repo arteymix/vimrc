@@ -29,6 +29,10 @@ endif
 " misc & performance
 set lazyredraw " redraw when necessary
 
+" key mapping
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
+
 " pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
@@ -47,9 +51,6 @@ if has('lua')
     let g:neocomplete#enable_at_startup=1
     let g:neocomplete#enable_smart_case=1
 endif
-
-" supertab
-let g:SuperTabDefaultCompletionType="<c-n>" " scroll from top to bottom
 
 " phpcomplete
 let g:phpcomplete_index_composer_command="composer"
