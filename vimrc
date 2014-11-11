@@ -53,15 +53,14 @@ if has('lua')
 endif
 
 " phpcomplete
-let g:phpcomplete_index_composer_command="composer"
+let g:phpcomplete_index_composer_command='composer'
 
 " solarized
 colorscheme solarized     " enable solarized theme
 call togglebg#map("<F5>") " switch solarized background
 
-" airline
-let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
+" lightline
+let g:lightline={'colorscheme' : 'solarized'}
 set laststatus=2
 
 " gutter
