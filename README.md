@@ -1,14 +1,13 @@
 vimrc
 =====
-My personal vimrc file including
-
-* dark and light [Solarized]() color scheme (toggle with F5)
+My personal vimrc file including:
+* dark and light [Solarized](http://ethanschoonover.com/solarized) color scheme (toggle with F5)
 * extra syntax highlighting for BNF, Liquid, Markdown, MIPS, OCL, Twig and Vala
 * [pathogen](https://github.com/tpope/vim-pathogen)
-* [vim-airline](https://github.com/bling/vim-airline)
+* [lightline](https://github.com/itchyny/lightline.vim) for a nice status bar
 * [neocomplete](https://github.com/Shougo/neocomplete.vim), if lua is enabled
-* [vim-autoclose](https://github.com/) to close parenthesis automatically
-* [vim-fugitive]() for an optimal git integration
+* [delimitMate](https://github.com/Raimondi/delimitMate) to close parenthesis automatically
+* [vim-fugitive](https://github.com/tpope/vim-fugitive) for an optimal git integration
 * [nerdtree](https://github.com/scrooloose/nerdtree) to browse files
 
 I mainly use it under the
@@ -42,5 +41,4 @@ make
 Todo
 ----
 List of plugins to bundle and test, eventually...
-* [vim-gitter](), git diff (+, -, ~) in the status bar
-* [vim-easy-align](), align content
+* integrate fugitive with lightline
