@@ -1,2 +1,2 @@
 " coding
-set textwidth=80  " 80 characters line long
+setlocal textwidth=80  " 80 characters line long

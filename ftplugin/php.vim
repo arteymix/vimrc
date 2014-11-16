@@ -1,1 +1,1 @@
-set noexpandtab " use tabs instead of spaces
+setlocal noexpandtab " use tabs instead of spaces
