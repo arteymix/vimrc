@@ -13,6 +13,7 @@ set backspace=2   " backspace in insert mode
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,mkd setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
