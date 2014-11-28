@@ -61,9 +61,9 @@
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
-[submodule "bundle/ligntline"]
-	path = bundle/lightline
-	url = https://github.com/itchyny/lightline.vim.git
 [submodule "bundle/loremipsum"]
 	path = bundle/loremipsum
 	url = https://github.com/vim-scripts/loremipsum
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/bling/vim-airline

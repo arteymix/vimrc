@@ -8,6 +8,7 @@ set smartindent   " smart indentation
 set showmatch     " highlight matching parenthesis, brace, ...
 set nowrap        " do not break long lines
 set backspace=2   " backspace in insert mode
+set laststatus=2  " show statusbar
 
 " completion
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -60,9 +61,8 @@ let g:phpcomplete_index_composer_command='composer'
 colorscheme solarized     " enable solarized theme
 call togglebg#map("<F5>") " switch solarized background
 
-" lightline
-let g:lightline={'colorscheme' : 'solarized'}
-set laststatus=2
+" vim-airline
+let g:airline_powerline_fonts=1
 
 " gutter
 highlight SignColumn ctermbg=black
