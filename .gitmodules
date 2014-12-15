@@ -19,9 +19,6 @@
 [submodule "bundle/vim-kangaroo"]
 	path = bundle/vim-kangaroo
 	url = https://github.com/tommcdo/vim-kangaroo.git
-[submodule "bundle/phpcomplete-extended"]
-	path = bundle/phpcomplete-extended
-	url = https://github.com/m2mdas/phpcomplete-extended.git
 [submodule "bundle/vim-autoformat"]
 	path = bundle/vim-autoformat
 	url = https://github.com/Chiel92/vim-autoformat.git

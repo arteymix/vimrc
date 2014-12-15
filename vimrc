@@ -14,7 +14,6 @@ set laststatus=2  " show statusbar
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,mkd setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
@@ -49,7 +48,7 @@ execute pathogen#infect()
 
 " phpcomplete_extended
 " composer is providen!
-let g:phpcomplete_index_composer_command='/usr/bin/env php '.expand("<sfile>:p:h").'/.vim/composer.phar'
+" let g:phpcomplete_index_composer_command='/usr/bin/env php '.expand("<sfile>:p:h").'/.vim/composer.phar'
 
 " neocomplete
 if has('lua')
