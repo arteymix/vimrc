@@ -1,9 +1,8 @@
 " coding
-set textwidth=80  " 80 characters lines
 set autoindent    " autoindent when appliable
 set smartindent   " smart indentation
 set showmatch     " highlight matching parenthesis, brace, ...
-set nowrap        " do not break long lines
+set wrap          " breaks long lines based on textwidth
 set backspace=2   " backspace in insert mode
 set laststatus=2  " show statusbar
 
@@ -20,9 +19,6 @@ set number              " show line numbers
 set term=xterm-256color " fix for color set
 set background=dark     " dark by default, switch with F5
 set cursorline          " highlight current
-if v:version >= 703
-    let &colorcolumn=join(range(&textwidth+1,200),",") " different background past 80 characters
-endif
 
 " misc & performance
 set lazyredraw " redraw when necessary
