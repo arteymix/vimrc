@@ -1,11 +1,11 @@
 vimrc
 =====
-My personal `.vim` folder and including:
+My personal `vim` configuration based on [Solarized](http://ethanschoonover.com/solarized) and [EditorConfig](http://editorconfig.org/) and tons of useful bundles.
 
 Bundles
 -------
 
- * [editorconfig](http://editorconfig.org/) to setup indentation and wrapping
+ * [EditorConfig](http://editorconfig.org/) to setup indentation and wrapping
  * dark and light [Solarized](http://ethanschoonover.com/solarized) color scheme
  * extra syntax highlighting for BNF, Liquid, Markdown, MIPS, OCL, Twig and Vala
  * [pathogen](https://github.com/tpope/vim-pathogen) to manage bundles
@@ -35,8 +35,6 @@ I mainly use it under the
 [GNOME Terminal](http://en.wikipedia.org/wiki/GNOME_Terminal).
 
 ![Preview with the dark solarized theme.](https://raw.githubusercontent.com/arteymix/vimrc/master/preview.png)
-
-Have fun hacking it ;)
 
 Installation
 ------------
@@ -68,7 +66,3 @@ since this project is hosted on GitHub.
    ```bash
    git pull && make
    ```
-
-Something's wrong or missing?
------------------------------
-Open an issue or submit me a pull request!
