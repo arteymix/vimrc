@@ -1,11 +1,11 @@
 vimrc
 =====
-My personal `.vim` folder and including:
+My personal `vim` configuration based on [Solarized](http://ethanschoonover.com/solarized) and [EditorConfig](http://editorconfig.org/) and tons of useful bundles.
 
 Bundles
 -------
 
- * [editorconfig](http://editorconfig.org/) to setup indentation and wrapping
+ * [EditorConfig](http://editorconfig.org/) to setup indentation and wrapping
  * dark and light [Solarized](http://ethanschoonover.com/solarized) color scheme
  * extra syntax highlighting for BNF, Liquid, Markdown, MIPS, OCL, Twig and Vala
  * [pathogen](https://github.com/tpope/vim-pathogen) to manage bundles
@@ -36,8 +36,6 @@ I mainly use it under the
 
 ![Preview with the dark solarized theme.](https://raw.githubusercontent.com/arteymix/vimrc/master/preview.png)
 
-Have fun hacking it ;)
-
 Installation
 ------------
 I like Pathogen and I assume you are familiar with [git](http://git-scm.com)
@@ -45,30 +43,26 @@ since this project is hosted on GitHub.
 
 1. Clone the repository directly as your new `.vim` folder:
 
-```bash
-git clone --recursive https://github.com/arteymix/vimrc.git ~/.vim
-```
+   ```bash
+   git clone --recursive https://github.com/arteymix/vimrc.git ~/.vim
+   ```
 
 2. Symlink `vimrc` and `editorconfig` in your home directory so that they stay
    up-to-date with the newest changes:
 
-```bash
-ln -s .vim/vimrc .vimrc
-ln -s .vim/editorconfig .editorconfig
-```
+   ```bash
+   ln -s .vim/vimrc .vimrc
+   ln -s .vim/editorconfig .editorconfig
+   ```
 
 3. Bundles requiring compilation is automated with a `Makefile`:
 
-```bash
-cd ~/.vim && make
-```
+   ```bash
+   cd ~/.vim && make
+   ```
 
 4. Pull often to keep up to date with latest features and fixes:
 
-```bash
-git pull && make
-```
-
-Something's wrong or missing?
------------------------------
-Open an issue or submit me a pull request!
+   ```bash
+   git pull && make
+   ```
