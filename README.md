@@ -45,29 +45,29 @@ since this project is hosted on GitHub.
 
 1. Clone the repository directly as your new `.vim` folder:
 
-```bash
-git clone --recursive https://github.com/arteymix/vimrc.git ~/.vim
-```
+   ```bash
+   git clone --recursive https://github.com/arteymix/vimrc.git ~/.vim
+   ```
 
 2. Symlink `vimrc` and `editorconfig` in your home directory so that they stay
    up-to-date with the newest changes:
 
-```bash
-ln -s .vim/vimrc .vimrc
-ln -s .vim/editorconfig .editorconfig
-```
+   ```bash
+   ln -s .vim/vimrc .vimrc
+   ln -s .vim/editorconfig .editorconfig
+   ```
 
 3. Bundles requiring compilation is automated with a `Makefile`:
 
-```bash
-cd ~/.vim && make
-```
+   ```bash
+   cd ~/.vim && make
+   ```
 
 4. Pull often to keep up to date with latest features and fixes:
 
-```bash
-git pull && make
-```
+   ```bash
+   git pull && make
+   ```
 
 Something's wrong or missing?
 -----------------------------
