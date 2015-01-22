@@ -1,8 +1,5 @@
 " coding
-set shiftwidth=4  " 4 spaces for indenting
-set tabstop=4     " 4 spaces shown per tab
-set softtabstop=4 " 4 spaces for inserted tab
-set expandtab     " expand tab to spaces
+set textwidth=80  " 80 characters lines
 set autoindent    " autoindent when appliable
 set smartindent   " smart indentation
 set showmatch     " highlight matching parenthesis, brace, ...
@@ -24,7 +21,7 @@ set term=xterm-256color " fix for color set
 set background=dark     " dark by default, switch with F5
 set cursorline          " highlight current
 if v:version >= 703
-    let &colorcolumn=join(range(81,200),",") " different background past 80 characters
+    let &colorcolumn=join(range(&textwidth+1,200),",") " different background past 80 characters
 endif
 
 " misc & performance
