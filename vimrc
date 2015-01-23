@@ -1,3 +1,15 @@
+" pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+let g:pathogen_disabled=[]
+
+" neocomplete requires vim to be compiled with lua
+if !has('lua')
+    call add(g:pathogen_disabled, 'neocomplete')
+endif
+
+execute pathogen#infect()
+
 " coding
 set autoindent    " autoindent when appliable
 set smartindent   " smart indentation
@@ -15,10 +27,10 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " style
 syntax on
+colorscheme solarized   " enable solarized theme
 set number              " show line numbers
-set term=xterm-256color " fix for color set
 set background=dark     " dark by default, switch with F5
-set cursorline          " highlight current
+set cursorline          " highlight current line
 
 " misc & performance
 set lazyredraw " redraw when necessary
@@ -27,47 +39,28 @@ set lazyredraw " redraw when necessary
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
 
-" pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-
-let g:pathogen_disabled=[]
-
-" neocomplete requires vim to be compiled with lua
-if !has('lua')
-    call add(g:pathogen_disabled, 'neocomplete')
-endif
-
-execute pathogen#infect()
-
-" phpcomplete_extended
-" composer is providen!
-" let g:phpcomplete_index_composer_command='/usr/bin/env php '.expand("<sfile>:p:h").'/.vim/composer.phar'
-
 " neocomplete
 if has('lua')
-    let g:acp_enableAtStartup=0
-    let g:neocomplete#enable_at_startup=1
-    let g:neocomplete#enable_smart_case=1
+  let g:acp_enableAtStartup=0
+  let g:neocomplete#enable_at_startup=1
+  let g:neocomplete#enable_smart_case=1
 
-    " vim-multiple-cursors with neocomplete
+  " vim-multiple-cursors with neocomplete
 
-    " Called once right before you start selecting multiple cursors
-    function! Multiple_cursors_before()
-        if exists(':NeoCompleteLock')==2
-            exe 'NeoCompleteLock'
-        endif
-    endfunction
+  " Called once right before you start selecting multiple cursors
+  function! Multiple_cursors_before()
+    if exists(':NeoCompleteLock')==2
+      exe 'NeoCompleteLock'
+    endif
+  endfunction
 
-    " Called once only when the multiple selection is canceled (default <Esc>)
-    function! Multiple_cursors_after()
-        if exists(':NeoCompleteUnlock')==2
-            exe 'NeoCompleteUnlock'
-        endif
-    endfunction
+  " Called once only when the multiple selection is canceled (default <Esc>)
+  function! Multiple_cursors_after()
+    if exists(':NeoCompleteUnlock')==2
+      exe 'NeoCompleteUnlock'
+    endif
+  endfunction
 endif
-
-" solarized
-colorscheme solarized     " enable solarized theme
 
 " vim-airline
 let g:airline_powerline_fonts=1
