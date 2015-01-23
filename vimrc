@@ -14,7 +14,7 @@ execute pathogen#infect()
 set autoindent    " autoindent when appliable
 set smartindent   " smart indentation
 set showmatch     " highlight matching parenthesis, brace, ...
-set wrap          " breaks long lines based on textwidth
+set nowrap        " breaks long lines based on textwidth
 set backspace=2   " backspace in insert mode
 set laststatus=2  " show statusbar
 
@@ -33,6 +33,7 @@ set background=dark     " dark by default, switch with F5
 set cursorline          " highlight current line
 
 " misc & performance
+set nocompatible
 set lazyredraw " redraw when necessary
 
 " key mapping

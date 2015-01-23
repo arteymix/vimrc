@@ -1,6 +1,8 @@
 vimrc
 =====
-My personal `vim` configuration based on [Solarized](http://ethanschoonover.com/solarized) and [EditorConfig](http://editorconfig.org/) and tons of useful bundles.
+My personal `vim` configuration based on
+[Solarized](http://ethanschoonover.com/solarized) and
+[EditorConfig](http://editorconfig.org/) and tons of useful bundles.
 
 Bundles
 -------
