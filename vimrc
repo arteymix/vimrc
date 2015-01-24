@@ -12,28 +12,22 @@ execute pathogen#infect()
 
 " coding
 set autoindent    " autoindent when appliable
-set smartindent   " smart indentation
 set showmatch     " highlight matching parenthesis, brace, ...
+set number        " show line numbers
 set nowrap        " breaks long lines based on textwidth
 set backspace=2   " backspace in insert mode
 set laststatus=2  " show statusbar
+set cursorline    " highlight current line
 
-" completion
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,mkd setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" syntax and indentation
+syntax on
+filetype plugin indent on
 
 " style
-syntax on
 colorscheme solarized   " enable solarized theme
-set number              " show line numbers
 set background=dark     " dark by default, switch with F5
-set cursorline          " highlight current line
 
 " misc & performance
-set nocompatible
 set lazyredraw " redraw when necessary
 
 " key mapping
