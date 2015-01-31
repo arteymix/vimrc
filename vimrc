@@ -23,6 +23,9 @@ set cursorline    " highlight current line
 syntax on
 filetype plugin indent on
 
+" vala indentation sucks ass.. (with closures)
+autocmd FileType vala setlocal filetype=javascript syntax=vala
+
 " style
 colorscheme solarized   " enable solarized theme
 set background=dark     " dark by default, switch with F5
