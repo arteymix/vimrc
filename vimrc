@@ -11,6 +11,7 @@ endif
 execute pathogen#infect()
 
 " coding
+set encoding=utf8
 set autoindent    " autoindent when appliable
 set showmatch     " highlight matching parenthesis, brace, ...
 set number        " show line numbers
@@ -31,6 +32,8 @@ colorscheme solarized   " enable solarized theme
 set background=dark     " dark by default, switch with F5
 
 " misc & performance
+set nobackup
+set noswapfile
 set lazyredraw " redraw when necessary
 
 " key mapping
