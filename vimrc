@@ -34,7 +34,8 @@ set background=dark     " dark by default, switch with F5
 " misc & performance
 set nobackup
 set noswapfile
-set lazyredraw " redraw when necessary
+set lazyredraw   " redraw when necessary
+set nofoldenable " fold initially opened
 
 " key mapping
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
