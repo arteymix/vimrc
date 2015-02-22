@@ -71,6 +71,10 @@ set nofoldenable " fold initially opened
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
 
+" EasyAlign interactive mode
+vmap <Enter> <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)"
+
 let g:EditorConfig_max_line_indicator='fill'
 
 " neocomplete
