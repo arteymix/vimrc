@@ -3,7 +3,6 @@ set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundle 'Chiel92/vim-autoformat'
-NeoBundle 'Raimondi/delimitMate', {'build': {'linux': 'make'}}
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -12,6 +11,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'edsono/vim-matchit'
 NeoBundle 'evidens/vim-twig'
+NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'krisajenkins/vim-pipe'
