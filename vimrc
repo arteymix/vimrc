@@ -1,14 +1,44 @@
-" pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+set runtimepath+=~/.vim/bundle/neobundle.vim/
 
-let g:pathogen_disabled=[]
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" neocomplete requires vim to be compiled with lua
-if !has('lua')
-    call add(g:pathogen_disabled, 'neocomplete')
-endif
+NeoBundle 'Chiel92/vim-autoformat'
+NeoBundle 'Raimondi/delimitMate', {'build': {'linux': 'make'}}
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'arteymix/vim-ocl'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'edsono/vim-matchit'
+NeoBundle 'evidens/vim-twig'
+NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'krisajenkins/vim-pipe'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'solarized'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+			\ 'build' : {
+			\     'windows' : 'tools\\update-dll-mingw',
+			\     'cygwin' : 'make -f make_cygwin.mak',
+			\     'mac' : 'make -f make_mac.mak',
+			\     'linux' : 'make',
+			\     'unix' : 'gmake',
+			\    },
+			\ }
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'tkztmk/vim-vala'
+NeoBundle 'tommcdo/vim-kangaroo'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-liquid'
+NeoBundle 'vim-pandoc/vim-pandoc'
+NeoBundle 'vim-pandoc/vim-pandoc-syntax'
+NeoBundle 'vim-scripts/brainfuck-syntax'
+NeoBundle 'vim-scripts/loremipsum'
 
-execute pathogen#infect()
+call neobundle#end()
 
 " coding
 set encoding=utf8
@@ -41,6 +71,8 @@ set nofoldenable " fold initially opened
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
 
+let g:EditorConfig_max_line_indicator='fill'
+
 " neocomplete
 if has('lua')
   let g:acp_enableAtStartup=0
@@ -69,3 +101,5 @@ let g:airline_powerline_fonts=1
 
 " gutter
 highlight SignColumn ctermbg=black
+
+NeoBundleCheck

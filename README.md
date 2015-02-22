@@ -1,16 +1,16 @@
-vimrc
-=====
+# vimrc
+
 My personal `vim` configuration based on
 [Solarized](http://ethanschoonover.com/solarized) and
 [EditorConfig](http://editorconfig.org/) and tons of useful bundles.
 
-Bundles
--------
+## Bundles
+
+All budles are managed by [NeoBundle](https://github.com/Shougo/neobundle.vim).
 
  * [EditorConfig](http://editorconfig.org/) to setup indentation and wrapping
  * dark and light [Solarized](http://ethanschoonover.com/solarized) color scheme
  * extra syntax highlighting for BNF, Liquid, Markdown, MIPS, OCL, Twig and Vala
- * [pathogen](https://github.com/tpope/vim-pathogen) to manage bundles
  * [vim-airline](https://github.com/bling/vim-airline) for a nice status bar
  * [vim-gitgutter](https://github.com/airblade/vim-gitgutter) to quickly see what has changed
  * [neocomplete](https://github.com/Shougo/neocomplete.vim) if lua is enabled
@@ -22,8 +22,8 @@ Bundles
  * [rainbow parentheses](https://github.com/kien/rainbow_parentheses.vim) because, who doesn't like rainbows?
  * [easy-align](https://github.com/junegunn/vim-easy-align) to align stuff
 
-Extras
-------
+## Extras
+
 It has syntax support for:
 
  * Brainfuck
@@ -38,10 +38,7 @@ I mainly use it under the
 
 ![Preview with the dark solarized theme.](https://raw.githubusercontent.com/arteymix/vimrc/master/preview.png)
 
-Installation
-------------
-I like Pathogen and I assume you are familiar with [git](http://git-scm.com)
-since this project is hosted on GitHub.
+## Installation
 
 1. Clone the repository directly as your new `.vim` folder:
 
@@ -55,16 +52,7 @@ since this project is hosted on GitHub.
    ```bash
    ln -s .vim/vimrc .vimrc
    ln -s .vim/editorconfig .editorconfig
-   ```
+    ```
 
-3. Bundles requiring compilation is automated with a `Makefile`:
-
-   ```bash
-   cd ~/.vim && make
-   ```
-
-4. Pull often to keep up to date with latest features and fixes:
-
-   ```bash
-   git pull && make
-   ```
+3. Start `vim`, NeoBundle will ask you to install the missing bundles
+4. Pull often :)
