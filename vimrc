@@ -1,6 +1,6 @@
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+set runtimepath+=~/.nvim/bundle/neobundle.vim/
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.nvim/bundle/'))
 
 NeoBundle 'Chiel92/vim-autoformat'
 if has('lua')
