@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.nvim/bundle')
 
 Plug 'Chiel92/vim-autoformat'
 if has('lua')
