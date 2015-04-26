@@ -83,14 +83,15 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)"
 
 let g:EditorConfig_max_line_indicator='fill'
-let g:airline_powerline_fonts=1
 let g:acp_enableAtStartup=0
+let g:airline_powerline_fonts=1
 
 if has('lua')
   let g:neocomplete#enable_at_startup=1
   let g:neocomplete#enable_smart_case=1
 else
   let g:neocomplcache_enable_at_startup=1
+  let g:neocomplcache_enable_smart_case=1
 endif
 
 NeoBundleCheck
