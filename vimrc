@@ -3,7 +3,11 @@ set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundle 'Chiel92/vim-autoformat'
-NeoBundle 'Shougo/neocomplete.vim'
+if has('lua')
+  NeoBundle 'Shougo/neocomplete.vim'
+else
+  NeoBundle 'Shougo/neocomplcache.vim'
+endif
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'arteymix/vim-ocl'
@@ -62,6 +66,7 @@ autocmd FileType vala setlocal filetype=javascript syntax=vala
 " style
 colorscheme solarized   " enable solarized theme
 set background=dark     " dark by default, switch with F5
+highlight SignColumn ctermbg=black
 
 " misc & performance
 set nobackup
@@ -78,34 +83,14 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)"
 
 let g:EditorConfig_max_line_indicator='fill'
+let g:airline_powerline_fonts=1
+let g:acp_enableAtStartup=0
 
-" neocomplete
 if has('lua')
-  let g:acp_enableAtStartup=0
   let g:neocomplete#enable_at_startup=1
   let g:neocomplete#enable_smart_case=1
-
-  " vim-multiple-cursors with neocomplete
-
-  " Called once right before you start selecting multiple cursors
-  function! Multiple_cursors_before()
-    if exists(':NeoCompleteLock')==2
-      exe 'NeoCompleteLock'
-    endif
-  endfunction
-
-  " Called once only when the multiple selection is canceled (default <Esc>)
-  function! Multiple_cursors_after()
-    if exists(':NeoCompleteUnlock')==2
-      exe 'NeoCompleteUnlock'
-    endif
-  endfunction
+else
+  let g:neocomplcache_enable_at_startup=1
 endif
-
-" vim-airline
-let g:airline_powerline_fonts=1
-
-" gutter
-highlight SignColumn ctermbg=black
 
 NeoBundleCheck
