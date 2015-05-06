@@ -68,6 +68,7 @@ autocmd FileType vala setlocal filetype=javascript syntax=vala
 colorscheme solarized   " enable solarized theme
 set background=dark     " dark by default, switch with F5
 highlight SignColumn ctermbg=black
+highlight Normal ctermbg=none
 
 " misc & performance
 set nobackup
