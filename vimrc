@@ -1,51 +1,41 @@
-set runtimepath+=~/.nvim/bundle/neobundle.vim/
+call plug#begin('~/.vim/bundle')
 
-call neobundle#begin(expand('~/.nvim/bundle/'))
-
-NeoBundle 'Chiel92/vim-autoformat'
+Plug 'Chiel92/vim-autoformat'
 if has('lua')
-  NeoBundle 'Shougo/neocomplete.vim'
+  Plug 'Shougo/neocomplete.vim'
 else
-  NeoBundle 'Shougo/neocomplcache.vim'
+  Plug 'Shougo/neocomplcache.vim'
 endif
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'arteymix/vim-ocl'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'edsono/vim-matchit'
-NeoBundle 'evidens/vim-twig'
-NeoBundle 'FredKSchott/CoVim'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'junegunn/goyo.vim'
-NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'kien/rainbow_parentheses.vim'
-NeoBundle 'krisajenkins/vim-pipe'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'solarized'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-			\ 'build' : {
-			\     'windows' : 'tools\\update-dll-mingw',
-			\     'cygwin' : 'make -f make_cygwin.mak',
-			\     'mac' : 'make -f make_mac.mak',
-			\     'linux' : 'make',
-			\     'unix' : 'gmake',
-			\    },
-			\ }
-NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'tkztmk/vim-vala'
-NeoBundle 'tommcdo/vim-kangaroo'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-liquid'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-pandoc/vim-pandoc'
-NeoBundle 'vim-pandoc/vim-pandoc-syntax'
-NeoBundle 'vim-scripts/brainfuck-syntax'
-NeoBundle 'vim-scripts/loremipsum'
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'arteymix/vim-ocl'
+Plug 'bling/vim-airline'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'edsono/vim-matchit'
+Plug 'evidens/vim-twig'
+Plug 'FredKSchott/CoVim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'krisajenkins/vim-pipe'
+Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/nerdtree'
+Plug 'solarized'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tkztmk/vim-vala'
+Plug 'tommcdo/vim-kangaroo'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-liquid'
+Plug 'tpope/vim-surround'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-scripts/brainfuck-syntax'
+Plug 'vim-scripts/loremipsum'
 
-call neobundle#end()
+call plug#end()
 
 " coding
 set encoding=utf8
@@ -95,5 +85,3 @@ else
   let g:neocomplcache_enable_at_startup=1
   let g:neocomplcache_enable_smart_case=1
 endif
-
-NeoBundleCheck
