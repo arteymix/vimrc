@@ -1,4 +1,8 @@
-call plug#begin('~/.vim/bundle')
+if has('nvim')
+  call plug#begin('~/.nvim/bundle')
+else
+  call plug#begin('~/.vim/bundle')
+endif
 
 Plug 'Chiel92/vim-autoformat'
 if has('lua')
@@ -33,6 +37,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-scripts/brainfuck-syntax'
+Plug 'vim-scripts/csv.vim'
 Plug 'vim-scripts/loremipsum'
 
 call plug#end()
@@ -77,6 +82,8 @@ nmap ga <Plug>(EasyAlign)"
 let g:EditorConfig_max_line_indicator='fill'
 let g:acp_enableAtStartup=0
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+let g:pandoc#syntax#codeblocks#embeds#langs=['java', 'python', 'vala']
 
 if has('lua')
   let g:neocomplete#enable_at_startup=1
