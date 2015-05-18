@@ -33,6 +33,7 @@ Plug 'tkztmk/vim-vala'
 Plug 'tommcdo/vim-kangaroo'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -43,21 +44,10 @@ Plug 'vim-scripts/loremipsum'
 call plug#end()
 
 " coding
-set encoding=utf8
-set autoindent    " autoindent when appliable
 set showmatch     " highlight matching parenthesis, brace, ...
 set number        " show line numbers
 set nowrap        " breaks long lines based on textwidth
-set backspace=2   " backspace in insert mode
-set laststatus=2  " show statusbar
 set cursorline    " highlight current line
-
-" syntax and indentation
-syntax on
-filetype plugin indent on
-
-" vala indentation sucks ass.. (with closures)
-autocmd FileType vala setlocal filetype=javascript syntax=vala
 
 " style
 colorscheme solarized   " enable solarized theme
