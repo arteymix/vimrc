@@ -1,6 +1,6 @@
 # vimrc
 
-My personal `vim` configuration based on
+My personal `neovim` configuration based on
 [Solarized](http://ethanschoonover.com/solarized) and
 [EditorConfig](http://editorconfig.org/) and tons of useful bundles.
 
@@ -40,19 +40,19 @@ I mainly use it under the
 
 ## Installation
 
-1. Clone the repository directly as your new `.vim` folder:
+1. Clone the repository directly as your new `~/.config/nvim` folder:
 
    ```bash
-   git clone --recursive https://github.com/arteymix/vimrc.git ~/.vim
+   git clone --recursive https://github.com/arteymix/vimrc.git ~/.config/nvim
    ```
 
-2. Symlink `vimrc` and `editorconfig` in your home directory so that they stay
-   up-to-date with the newest changes:
+2. Symlink `editorconfig` in your home directory so that they stay up-to-date
+   with the newest changes:
 
    ```bash
-   ln -s .vim/vimrc .vimrc
-   ln -s .vim/editorconfig .editorconfig
+   ln -s .config/nvim/editorconfig .editorconfig
     ```
 
-3. Start `vim`, NeoBundle will ask you to install the missing bundles
+3. Start `nvim`, and launch `:PlugUpdate` to install the missing bundles
+
 4. Pull often :)
