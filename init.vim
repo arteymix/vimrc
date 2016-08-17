@@ -11,6 +11,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'airblade/vim-gitgutter'
 Plug 'arteymix/vim-ocl'
 Plug 'artur-shaik/vim-javacomplete2'
+Plug 'carlitux/deoplete-ternjs'
 Plug 'davidhalter/jedi-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'edsono/vim-matchit'
