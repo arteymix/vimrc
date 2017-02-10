@@ -1,20 +1,19 @@
 call plug#begin('~/.config/nvim/bundle')
 
 Plug '20115681/vim-meson'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Chiel92/vim-autoformat'
-Plug 'FredKSchott/CoVim'
+Plug 'EinfachToll/DidYouMean'
 Plug 'GrAndSE/genie-script-vim-syntax'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'airblade/vim-gitgutter'
 Plug 'arteymix/vim-ocl'
-Plug 'artur-shaik/vim-javacomplete2'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'davidhalter/jedi-vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'edsono/vim-matchit'
+Plug 'raimondi/delimitmate'
+Plug 'matchit.zip'
 Plug 'evidens/vim-twig'
 Plug 'groenewege/vim-less'
 Plug 'jiangmiao/auto-pairs'
@@ -25,14 +24,17 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'krisajenkins/vim-pipe'
 Plug 'morhetz/gruvbox'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'tkztmk/vim-vala'
+Plug 'arrufat/vala.vim'
 Plug 'tommcdo/vim-kangaroo'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-latex/vim-latex'
@@ -42,6 +44,8 @@ Plug 'vim-scripts/brainfuck-syntax'
 Plug 'vim-scripts/csv.vim'
 Plug 'vim-scripts/loremipsum'
 Plug 'vim-scripts/vim-gradle'
+Plug 'zchee/deoplete-clang'
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
@@ -55,11 +59,15 @@ set breakindent " preserve indentation when breaking long lines
 set list        " show invisible characters
 set splitbelow
 set splitright
+set omnifunc=syntaxcomplete#Complete
+set cinoptions=(0
 
 " style
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme gruvbox
 set background=dark
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
 " misc & performance
 set nobackup
@@ -68,10 +76,6 @@ set lazyredraw   " redraw when necessary
 set nofoldenable " fold initially opened
 
 let mapleader = "\<space>"
-
-" tab navigation in autocomplete
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
 
 " splits navigation
 nnoremap <C-J> <C-W><C-J>
@@ -90,6 +94,7 @@ nnoremap <leader>s :split<return>
 
 " file detection
 autocmd BufNewFile,BufRead wscript* set filetype=python
+autocmd BufNewFile,BufRead *.cl set filetype=c
 
 " EasyAlign interactive mode
 vmap <Enter> <Plug>(EasyAlign)
@@ -100,6 +105,8 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1
 let g:deoplete#enable_at_startup=1
+let g:deoplete#sources#clang#libclang_path='/usr/lib64/libclang.so'
+let g:deoplete#sources#clang#clang_header='/usr/lib64/clang'
 let g:pandoc#syntax#codeblocks#embeds#langs=['java', 'python', 'vala']
 "let g:syntastic_php_checkers=['php']
 let g:makeshift_systems={'wscript': './waf build', 'build.ninja': 'ninja-build', 'meson.build': 'ninja-build -C build'}
