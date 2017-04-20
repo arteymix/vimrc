@@ -5,30 +5,30 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'EinfachToll/DidYouMean'
 Plug 'GrAndSE/genie-script-vim-syntax'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neco-syntax'
+Plug 'Shougo/neco-vim'
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'Shougo/vimproc.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'arrufat/vala.vim'
 Plug 'arteymix/vim-ocl'
 Plug 'carlitux/deoplete-ternjs'
-Plug 'davidhalter/jedi-vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'embear/vim-localvimrc'
 Plug 'ervandew/supertab'
 Plug 'evidens/vim-twig'
 Plug 'groenewege/vim-less'
 Plug 'jiangmiao/auto-pairs'
-Plug 'johnsyweb/vim-makeshift'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'kchmck/vim-coffee-script'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'krisajenkins/vim-pipe'
-Plug 'matchit.zip'
+Plug 'majutsushi/tagbar'
 Plug 'morhetz/gruvbox'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
+Plug 'prabirshrestha/async.vim'
 Plug 'raimondi/delimitmate'
 Plug 'tommcdo/vim-kangaroo'
 Plug 'tpope/vim-fugitive'
@@ -41,14 +41,23 @@ Plug 'vim-latex/vim-latex'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-scripts/brainfuck-syntax'
-Plug 'vim-scripts/csv.vim'
 Plug 'vim-scripts/loremipsum'
+Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/vim-gradle'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-jedi'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
 call plug#end()
+
+
+let g:LanguageClient_serverCommands = {
+    \ 'vala': ['vala-language-server']
+    \ }
 
 " coding
 set showmatch   " highlight matching parenthesis, brace, ...
@@ -62,27 +71,31 @@ set splitbelow
 set splitright
 set omnifunc=syntaxcomplete#Complete
 set cinoptions=(0
+set cinkeys-=0#
+"set smarttab
+set spell
+set inccommand=nosplit
+set wildmenu
 
 " style
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme gruvbox
 set background=dark
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 
 " misc & performance
+set autoread
 set nobackup
 set noswapfile
-set lazyredraw   " redraw when necessary
 set nofoldenable " fold initially opened
 
 let mapleader = "\<space>"
 
 " splits navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <space>h <C-W><C-H>
+nnoremap <space>j <C-W><C-J>
+nnoremap <space>k <C-W><C-K>
+nnoremap <space>l <C-W><C-L>
 
 " shortcuts
 nnoremap <leader>w :w<return>
@@ -92,8 +105,10 @@ nnoremap <leader>m :make<return>
 nnoremap <leader>t :make test<return>
 nnoremap <leader>c :make clean<return>
 nnoremap <leader>s :split<return>
+nnoremap <leader>pt :Pandoc tex<return>
 nnoremap <leader>pb :Pandoc beamer<return>
 nnoremap <leader>pp :Pandoc pdf<return>
+nnoremap <leader>pl :Pandoc --template=letter pdf<return>
 
 " file detection
 autocmd BufNewFile,BufRead wscript* set filetype=python
@@ -104,16 +119,9 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)"
 
 let g:EditorConfig_max_line_indicator='fill'
+let g:SuperTabDefaultCompletionType='<c-n>'
 let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
-let g:airline_theme='gruvbox'
 let g:deoplete#enable_at_startup=1
 let g:deoplete#sources#clang#clang_header='/usr/lib64/clang'
 let g:deoplete#sources#clang#libclang_path='/usr/lib64/libclang.so'
-let g:localvimrc_ask=0
-let g:makeshift_systems={'wscript': './waf build', 'build.ninja': 'ninja-build', 'meson.build': 'ninja-build -C build'}
-let g:makeshift_use_pwd_first=1
 let g:pandoc#syntax#codeblocks#embeds#langs=['java', 'python', 'vala']
-let g:syntastic_php_checkers=['php']
-let g:syntastic_vala_modules=['glib-2.0', 'gio-2.0', 'libsoup-2.4']
-let g:syntastic_vala_vapidirs=['vapi']
