@@ -8,12 +8,13 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'airblade/vim-gitgutter'
+Plug 'arrufat/vala.vim'
 Plug 'arteymix/vim-ocl'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'davidhalter/jedi-vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'raimondi/delimitmate'
-Plug 'matchit.zip'
+Plug 'embear/vim-localvimrc'
+Plug 'ervandew/supertab'
 Plug 'evidens/vim-twig'
 Plug 'groenewege/vim-less'
 Plug 'jiangmiao/auto-pairs'
@@ -23,18 +24,17 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'krisajenkins/vim-pipe'
+Plug 'matchit.zip'
 Plug 'morhetz/gruvbox'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'arrufat/vala.vim'
+Plug 'raimondi/delimitmate'
 Plug 'tommcdo/vim-kangaroo'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-latex/vim-latex'
@@ -44,6 +44,7 @@ Plug 'vim-scripts/brainfuck-syntax'
 Plug 'vim-scripts/csv.vim'
 Plug 'vim-scripts/loremipsum'
 Plug 'vim-scripts/vim-gradle'
+Plug 'vim-syntastic/syntastic'
 Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-jedi'
 
@@ -102,12 +103,15 @@ nmap ga <Plug>(EasyAlign)"
 
 let g:EditorConfig_max_line_indicator='fill'
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1
+let g:airline_theme='gruvbox'
 let g:deoplete#enable_at_startup=1
-let g:deoplete#sources#clang#libclang_path='/usr/lib64/libclang.so'
 let g:deoplete#sources#clang#clang_header='/usr/lib64/clang'
-let g:pandoc#syntax#codeblocks#embeds#langs=['java', 'python', 'vala']
-"let g:syntastic_php_checkers=['php']
+let g:deoplete#sources#clang#libclang_path='/usr/lib64/libclang.so'
+let g:localvimrc_ask=0
 let g:makeshift_systems={'wscript': './waf build', 'build.ninja': 'ninja-build', 'meson.build': 'ninja-build -C build'}
 let g:makeshift_use_pwd_first=1
+let g:pandoc#syntax#codeblocks#embeds#langs=['java', 'python', 'vala']
+let g:syntastic_php_checkers=['php']
+let g:syntastic_vala_modules=['glib-2.0', 'gio-2.0', 'libsoup-2.4']
+let g:syntastic_vala_vapidirs=['vapi']
