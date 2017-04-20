@@ -92,6 +92,8 @@ nnoremap <leader>m :make<return>
 nnoremap <leader>t :make test<return>
 nnoremap <leader>c :make clean<return>
 nnoremap <leader>s :split<return>
+nnoremap <leader>pb :Pandoc beamer<return>
+nnoremap <leader>pp :Pandoc pdf<return>
 
 " file detection
 autocmd BufNewFile,BufRead wscript* set filetype=python
