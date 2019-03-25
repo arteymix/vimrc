@@ -1,5 +1,6 @@
 call plug#begin('~/.config/nvim/bundle')
 
+Plug 'broadinstitute/vim-wdl'
 Plug 'Chiel92/vim-autoformat'
 Plug 'EinfachToll/DidYouMean'
 Plug 'GrAndSE/genie-script-vim-syntax'
@@ -109,6 +110,9 @@ nnoremap <leader>pt :Pandoc tex<return>
 nnoremap <leader>pb :Pandoc beamer<return>
 nnoremap <leader>pp :Pandoc pdf<return>
 nnoremap <leader>pl :Pandoc --template=letter pdf<return>
+
+" terminal mode
+tnoremap <Esc> <C-\><C-n>
 
 " file detection
 autocmd BufNewFile,BufRead wscript* set filetype=python
