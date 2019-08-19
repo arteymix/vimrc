@@ -35,6 +35,9 @@ Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-jedi'
 Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-vim'
+Plug 'ncm2/ncm2-markdown-subscope'
+Plug 'ncm2/ncm2-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'raimondi/delimitmate'
 Plug 'roxma/nvim-yarp'
@@ -122,7 +125,7 @@ autocmd BufNewFile,BufRead *.cl set filetype=c
 vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)"
 
-let g:LanguageClient_serverCommands = {'c': ['clangd', '-compile-commands-dir=build']}
+let g:LanguageClient_serverCommands = {'c': ['clangd', '-compile-commands-dir=build'], 'vala': ['vala-language-server']}
 let g:EditorConfig_max_line_indicator='fill'
 let g:airline#extensions#tabline#enabled=1
 let g:pandoc#syntax#codeblocks#embeds#langs=['java', 'python', 'vala']
