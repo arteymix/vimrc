@@ -55,6 +55,7 @@ Plug 'vim-scripts/brainfuck-syntax'
 Plug 'vim-scripts/loremipsum'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/vim-gradle'
+Plug 'SchedMD/slurm'
 
 autocmd BufEnter * call ncm2#enable_for_buffer()
 

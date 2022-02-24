@@ -1,0 +1,1 @@
+../../../bundle/slurm/contribs/slurm_completion_help/slurm.vim
