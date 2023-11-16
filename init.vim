@@ -55,6 +55,7 @@ set completeopt=noinsert,menuone,noselect
 
 " coding
 set autoindent
+set mouse=
 set showmatch   " highlight matching parenthesis, brace, ...
 set number      " show line numbers
 set relativenumber
