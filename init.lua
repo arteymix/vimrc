@@ -57,33 +57,33 @@ vim.api.nvim_create_autocmd({'BufEnter'}, {
 vim.cmd("set completeopt=noinsert,menuone,noselect")
 
 -- coding
-vim.g.autodindent=true
-vim.g.mouse=''
-vim.g.showmatch=true          -- highlight matching parenthesis, brace, ...
-vim.g.number=true             -- show line numbers
-vim.g.relativenumber=true
-vim.g.wrap=false              -- breaks long lines based on textwidth
-vim.g.cursorline=true         -- highlight current line
-vim.g.breakindent=true        -- preserve indentation when breaking long lines
-vim.g.list=true               -- show invisible characters
-vim.g.splitbelow=true
-vim.g.splitright=true
+vim.opt.autoindent=true
+vim.opt.mouse=''
+vim.opt.showmatch=true          -- highlight matching parenthesis, brace, ...
+vim.opt.number=true             -- show line numbers
+vim.opt.relativenumber=true
+vim.opt.wrap=false              -- breaks long lines based on textwidth
+vim.opt.cursorline=true         -- highlight current line
+vim.opt.breakindent=true        -- preserve indentation when breaking long lines
+vim.opt.list=true               -- show invisible characters
+vim.opt.splitbelow=true
+vim.opt.splitright=true
 vim.cmd("set cinoptions=(0")
 vim.cmd("set cinkeys-=0#")
 -- vim.cmd("set smarttab")
-vim.g.spell=true
-vim.g.incommand='nosplit'
-vim.g.wildmenu=true
+vim.opt.spell=true
+vim.opt.inccommand='nosplit'
+vim.opt.wildmenu=true
 
 -- style
 vim.cmd.colorscheme("gruvbox")
-vim.g.background='dark'
+vim.opt.background='dark'
 vim.cmd.highlight({"Normal", "ctermbg=none"})
 vim.cmd.highlight({"NonText", "ctermbg=none"})
 
 -- misc & performance
-vim.g.autoread=true
-vim.g.foldenable=false -- fold initially opened
+vim.opt.autoread=true
+vim.opt.foldenable=false -- fold initially opened
 
 vim.cmd("let mapleader = \"\\<space>\"")
 
