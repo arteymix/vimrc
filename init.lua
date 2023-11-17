@@ -125,7 +125,6 @@ vim.cmd("autocmd BufNewFile,BufRead *.cl set filetype=c")
 
 -- EasyAlign interactive mode
 vim.keymap.set("v", "<Enter>", "<Plug>(EasyAlign)")
-vim.keymap.set("n", "ga", "<Plug>(EasyAlign)")
 
 -- this plugin remaps a bunch of keys starting by '<leader>h' which interferes
 -- with split navigation
