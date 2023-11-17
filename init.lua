@@ -130,6 +130,7 @@ vim.keymap.set("n", "ga", "<Plug>(EasyAlign)")
 -- this plugin remaps a bunch of keys starting by '<leader>h' which interferes
 -- with split navigation
 vim.g['gitgutter_map_keys'] = false
+vim.g['airline_powerline_fonts'] = true
 vim.g['airline#extensions#tabline#enabled'] = true
 vim.g['pandoc#syntax#codeblocks#embeds#langs'] = {'java', 'python', 'vala'}
 vim.g['loaded_ruby_provider'] = 0
