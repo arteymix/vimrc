@@ -39,95 +39,99 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-latex/vim-latex'
 Plug 'vim-pandoc/vim-pandoc'
--- vim.cmd("Plug 'vim-pandoc/vim-pandoc-syntax'")
+-- This plugin is currently broken (see https://github.com/vim-pandoc/vim-pandoc-syntax/issues/386 for details)
+-- Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-scripts/brainfuck-syntax'
 Plug 'vim-scripts/loremipsum'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/vim-gradle'
 Plug 'w0rp/ale'
 
-vim.cmd("autocmd BufEnter * call ncm2#enable_for_buffer()")
-
 vim.call("plug#end")
 
-vim.cmd("autocmd BufEnter * call ncm2#enable_for_buffer()")
+vim.api.nvim_create_autocmd({'BufEnter'}, {
+    pattern = {'*'},
+    command = 'call ncm2#enable_for_buffer()'
+})
 vim.cmd("set completeopt=noinsert,menuone,noselect")
 
 -- coding
-vim.cmd("set autoindent")
-vim.cmd("set mouse=")
-vim.cmd("set showmatch")      -- highlight matching parenthesis, brace, ...
-vim.cmd("set number")         -- show line numbers
-vim.cmd("set relativenumber")
-vim.cmd("set nowrap")         -- breaks long lines based on textwidth
-vim.cmd("set cursorline")     -- highlight current line
-vim.cmd("set breakindent")    -- preserve indentation when breaking long lines
-vim.cmd("set list")           -- show invisible characters
-vim.cmd("set splitbelow")
-vim.cmd("set splitright")
+vim.g.autodindent=true
+vim.g.mouse=''
+vim.g.showmatch=true          -- highlight matching parenthesis, brace, ...
+vim.g.number=true             -- show line numbers
+vim.g.relativenumber=true
+vim.g.wrap=false              -- breaks long lines based on textwidth
+vim.g.cursorline=true         -- highlight current line
+vim.g.breakindent=true        -- preserve indentation when breaking long lines
+vim.g.list=true               -- show invisible characters
+vim.g.splitbelow=true
+vim.g.splitright=true
 vim.cmd("set cinoptions=(0")
 vim.cmd("set cinkeys-=0#")
 -- vim.cmd("set smarttab")
-vim.cmd("set spell")
-vim.cmd("set inccommand=nosplit")
-vim.cmd("set wildmenu")
+vim.g.spell=true
+vim.g.incommand='nosplit'
+vim.g.wildmenu=true
 
 -- style
-vim.cmd("colorscheme gruvbox")
-vim.cmd("set background=dark")
-vim.cmd("highlight Normal ctermbg=none")
-vim.cmd("highlight NonText ctermbg=none")
+vim.cmd.colorscheme("gruvbox")
+vim.g.background='dark'
+vim.cmd.highlight({"Normal", "ctermbg=none"})
+vim.cmd.highlight({"NonText", "ctermbg=none"})
 
 -- misc & performance
-vim.cmd("set autoread")
-vim.cmd("set nofoldenable") -- fold initially opened
+vim.g.autoread=true
+vim.g.foldenable=false -- fold initially opened
 
 vim.cmd("let mapleader = \"\\<space>\"")
 
 -- splits navigation
-vim.cmd("nnoremap <leader>s :split<return>")
-vim.cmd("nnoremap <leader>vs :vsplit<return>")
-vim.cmd("nnoremap <leader>h <C-W><C-H>")
-vim.cmd("nnoremap <leader>j <C-W><C-J>")
-vim.cmd("nnoremap <leader>k <C-W><C-K>")
-vim.cmd("nnoremap <leader>l <C-W><C-L>")
+vim.keymap.set("n", "<leader>s", ":split<return>")
+vim.keymap.set("n", "<leader>vs", ":vsplit<return>")
+vim.keymap.set("n", "<leader>h", "<C-W><C-H>")
+vim.keymap.set("n", "<leader>j", "<C-W><C-J>")
+vim.keymap.set("n", "<leader>k", "<C-W><C-K>")
+vim.keymap.set("n", "<leader>l", "<C-W><C-L>")
 
-vim.cmd("nnoremap <leader>b :b<space>")
-vim.cmd("nnoremap <leader>bn :bnext<return>")
-vim.cmd("nnoremap <leader>bp :bprevious<return>")
-vim.cmd("nnoremap <leader>bd :bdelete<return>")
+vim.keymap.set("n", "<leader>b", ":b<space>")
+vim.keymap.set("n", "<leader>bn", ":bnext<return>")
+vim.keymap.set("n", "<leader>bp", ":bprevious<return>")
+vim.keymap.set("n", "<leader>bd", ":bdelete<return>")
 
 -- yank & paste from system clipboard
-vim.cmd("nnoremap  <leader>y \"+y")
-vim.cmd("nnoremap  <leader>p \"+p")
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>p", "\"+p")
 
 -- shortcuts
-vim.cmd("nnoremap <leader>w :w<return>")
-vim.cmd("nnoremap <leader>wq :wq<return>")
-vim.cmd("nnoremap <leader>q :q<return>")
-vim.cmd("nnoremap <leader>m :make<return>")
-vim.cmd("nnoremap <leader>t :make test<return>")
-vim.cmd("nnoremap <leader>c :make clean<return>")
-vim.cmd("nnoremap <leader>pt :Pandoc tex<return>")
-vim.cmd("nnoremap <leader>pb :Pandoc beamer --pdf-engine xelatex<return>")
-vim.cmd("nnoremap <leader>pp :Pandoc pdf<return>")
-vim.cmd("nnoremap <leader>pl :Pandoc --template=letter pdf<return>")
+vim.keymap.set("n", "<leader>w",":w<return>")
+vim.keymap.set("n", "<leader>wq",":wq<return>")
+vim.keymap.set("n", "<leader>q",":q<return>")
+vim.keymap.set("n", "<leader>m",":make<return>")
+vim.keymap.set("n", "<leader>t",":make test<return>")
+vim.keymap.set("n", "<leader>c",":make clean<return>")
+vim.keymap.set("n", "<leader>pt", ":Pandoc tex<return>")
+vim.keymap.set("n", "<leader>pb", ":Pandoc beamer --pdf-engine xelatex<return>")
+vim.keymap.set("n", "<leader>pp", ":Pandoc pdf<return>")
+vim.keymap.set("n", "<leader>pl", ":Pandoc --template=letter pdf<return>")
 
 -- terminal mode
-vim.cmd("tnoremap <Esc> <C-\\><C-n>")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- file detection
 vim.cmd("autocmd BufNewFile,BufRead wscript* set filetype=python")
 vim.cmd("autocmd BufNewFile,BufRead *.cl set filetype=c")
 
 -- EasyAlign interactive mode
-vim.cmd("vmap <Enter> <Plug>(EasyAlign)")
-vim.cmd("nmap ga <Plug>(EasyAlign)\"")
+vim.keymap.set("v", "<Enter>", "<Plug>(EasyAlign)")
+vim.keymap.set("n", "ga", "<Plug>(EasyAlign)")
 
 -- this plugin remaps a bunch of keys starting by '<leader>h' which interferes
 -- with split navigation
-vim.cmd("let g:gitgutter_map_keys=0")
-vim.cmd("let g:airline#extensions#tabline#enabled=1")
-vim.cmd("let g:pandoc#syntax#codeblocks#embeds#langs=['java', 'python', 'vala']")
+vim.g['gitgutter_map_keys'] = false
+vim.g['airline#extensions#tabline#enabled'] = true
+vim.g['pandoc#syntax#codeblocks#embeds#langs'] = {'java', 'python', 'vala'}
+vim.g['loaded_ruby_provider'] = 0
+vim.g['loaded_node_provider'] = 0
+vim.g['loaded_perl_provider'] = 0
