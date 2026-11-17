@@ -31,14 +31,14 @@ vim.cmd("Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'")
 Plug 'ncm2/ncm2-tern'
 Plug 'ncm2/ncm2-vim'
 Plug 'ncm2/ncm2-vim-lsp'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-pandoc/vim-pandoc'
 -- This plugin is currently broken (see https://github.com/vim-pandoc/vim-pandoc-syntax/issues/386 for details)
 -- Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -49,6 +49,8 @@ Plug 'vim-scripts/vim-gradle'
 Plug 'w0rp/ale'
 
 vim.call("plug#end")
+
+require('lualine').setup()
 
 vim.api.nvim_create_autocmd({'BufEnter'}, {
     pattern = {'*'},
@@ -129,8 +131,6 @@ vim.keymap.set("v", "<Enter>", "<Plug>(EasyAlign)")
 -- this plugin remaps a bunch of keys starting by '<leader>h' which interferes
 -- with split navigation
 vim.g['gitgutter_map_keys'] = false
-vim.g['airline_powerline_fonts'] = true
-vim.g['airline#extensions#tabline#enabled'] = true
 vim.g['pandoc#syntax#codeblocks#embeds#langs'] = {'java', 'python', 'vala'}
 vim.g['loaded_ruby_provider'] = 0
 vim.g['loaded_node_provider'] = 0
